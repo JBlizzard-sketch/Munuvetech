@@ -1,0 +1,67 @@
+AGENT JOB: Munuve Tech — repo repair, content reconnect, UI overhaul, image pipeline fix, deploy-ready.
+Initial requirement (MANDATORY):
+Immediately open and read all .md files in the repo. Treat them as canonical — extract site content, tag lists, and required pages. Begin by creating /PROGRESS_LOG.md and append a timestamped entry describing what you read and what you’ll change next.
+
+Make frequent commits. After each major step create a clear entry in PROGRESS_LOG.md and push.
+
+Main objectives (execute in priority order):
+A. Content & Pages
+Standardize and correct the founder’s name across the repository to: Joe Makali Munuve (single n). Update all markdown frontmatter, JSON team data, page content, meta tags, alt text, image captions and any code comments that display the name.
+
+Careers: Extract the existing careers content from the Team page, or take it piecemeal from the footer section and create a new dedicated page /careers (or /jobs) with the same content and proper meta. Add this page to the main navigation menu and keep it in the footer. Make sure “View open positions” on the Team page links to the new standalone careers page.
+
+Blog posts: Search the repo for all blog post files and “orphaned” content. If the repo contains blog markdowns, ensure each has valid frontmatter (title, date, tags, description, featuredImage). But ensure you ardously look for them first. If blog posts are missing, recreate 7–10 SEO-ready posts (use earlier instructions). Add cover images (see image pipeline below) and ensure the blog listing and individual posts are routable and linked from the header/footer.
+
+Case studies: Re-locate all case-study markdowns and ensure they are grouped by category per the Case Studies menu. Confirm the three real case studies are fully linked and rendered:
+
+https://kechitacredit.netlify.app/success-stories
+
+https://motkitt.netlify.app/
+
+https://stera3.vercel.app/
+ If other case studies exist in the repo, ensure each has frontmatter including industry, metrics, featuredImage and slug and make them show in the Case Studies index page with correct filtering. Also, ensure the created case studies match a Kennyan/Africann context, at least 70% of them. 
+
+Create or fix Sitemap pages (if missing). Ensure all pages include a visible footer link to these legal pages.
+
+B. Navigation & UX
+Ensure clicking any submenu or category link takes the user immediately to the top of the destination page. Implement route-level scroll reset so the page top is shown instantly. Confirm cross-browser behavior (mobile + desktop). If not already implemented. 
+
+Ensure the hero carousel autoplays smoothly (4–6s per slide), pauses on hover, has previous/next controls, and includes an accessible progress indicator. Ensure the hero font contrast is enforced and the primary CTA Start your project triggers the contact or onboarding flow. Also, once you fix the case studies and blogs, inncorporate them here cretively. 
+
+Implement an onboarding microflow (optional path from the CTA): a progressive form with dropdown questions capturing service interest, budget range, timeline, and company size, and an option to continue to the standard contact form. Save onboarding submissions to CSV or serverless function (Netlify/Vercel), if other things have been saved, if not do what the others have done. 
+
+C. Images & assets
+Investigate the existing image library or assets/images directory and the component(s) that load images. Look /IMAGE_LIBRARY.md which lists current image files and their usage. If image references are broken or irrelevant, replace them piecemeal with curated high-quality external URLs (Unsplash or Pexels) and document each replacement. Ensure these images are placed where pertinent across all pages to reduce text monotony
+
+Implement aggressive lazy-loading for all images and ensure each <img> uses srcset and modern formats where possible (AVIF/WebP fallback). If the image component blocks external URLs, download properly licensed images into /public/assets/images/ and update paths in frontmatter.
+
+D. UI redesign & accessibility
+Refresh the site’s dark theme to match the uploaded Munuve Tech logo palette and increase contrast to make hero text fully readable. Add subtle texture and layered depth, richer card shadows, and microinteractions on hover. Provide two themes (dark primary, light secondary) with a toggle.
+
+Expand biographies in /content/team and ensure Joe Makali Munuve has a robust, one-paragraph bio and contact metadata, as well as the others.
+
+Create a Testimonial pages if missing. Populate testimonials (6–10 entries) and implement a rotating carousel and grid.
+
+E. Performance & SEO
+Audit and apply performance fixes: image optimization, critical CSS inlined for hero, code splitting, and resource hints for fonts/APIs. Document baseline Lighthouse metrics and post-fix metrics in PERFORMANCE_REPORT.md.
+
+Ensure OpenGraph, Twitter Cards, canonical meta, sitemap.xml and robots.txt are present and correct.
+
+F. Documentation & resumability (mandatory)
+Produce/update these repo root files: PROGRESS_LOG.md, SETUP_INSTRUCTIONS.md, FINAL_REPORT.md, IMAGE_LIBRARY.md, TAGLINES.md (include 3 short taglines and chosen default), PERFORMANCE_REPORT.md, QA_CHECKLIST.md.
+
+If your runtime is about to end, leave clear, step-by-step TODOs in PROGRESS_LOG.md and SETUP_INSTRUCTIONS.md so a fresh agent can resume.
+
+Operational rules:
+Preserve Netlify deploy; do not change the deployment target unless requested. If any build settings need change, write instructions in SETUP_INSTRUCTIONS.md.
+
+For any assumptions (missing content, missing API keys), create TODOs with exact filenames and example values.
+
+For images, prioritize diversity: when choosing images from Unsplash/Pexels use search keywords that include “Kenyan”, “African business”, “African professionals”, and filter for high quality. Document query examples in IMAGE_LIBRARY.md. But emphasize more onn technology  images as stock tools may not have manny authentic Kenyan images
+
+Deliverable checkpoint (after major milestones):
+Commit and push after each milestone, and append a timestamped summary to PROGRESS_LOG.md.
+
+After finishing: ensure site runs locally (npm run dev or equivalent) and that production deploy to Netlify still works. Include a FINAL_REPORT.md with before/after screenshots, performance numbers and a short explanation of major changes.
+
+Start now. Open every .md, update logs, and produce the first commit that standardizes the name Joe Makali Munuve and creates the required documentation skeleton files.

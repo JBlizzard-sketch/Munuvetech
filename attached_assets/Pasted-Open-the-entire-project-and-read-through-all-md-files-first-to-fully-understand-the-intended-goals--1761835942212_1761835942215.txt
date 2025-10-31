@@ -1,0 +1,74 @@
+Open the entire project and read through all .md files first to fully understand the intended goals, design direction, and structure.
+
+The site currently builds successfully on Netlify, but the deployed link shows 404 Page Not Found. This needs to be resolved. Refer to this guide and apply the correct fix for routing and deployment:
+https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125?utm_source=404page&utm_campaign=community_tracking
+
+Key Issues to Address
+
+Brand Integration & Visual Identity
+
+The logo is too small and not well integrated into the layout.
+
+The UI should reflect the color palette, energy, and style of the brand.
+
+The current font does not feel polished or world-class → select a better modern, clean typeface.
+
+Hero & Homepage Polish
+
+Improve the hero carousel — right now it looks cheap and generic.
+
+Use high-quality imagery (already available in the image library — ensure these are used strategically).
+
+Add, resize, or reposition sections so the landing page feels bold, confident, and professional.
+
+Content & Structure
+
+Services need to be grouped into clear categories.
+
+Case studies architecture is present but currently displays 0 — implement and populate properly.
+
+Add missing key pages:
+
+Team
+
+Careers
+
+Blog pages need proper feature images.
+
+Other pages also need appropriate images placed throughout.
+
+Contact & Identity
+
+Update contact info to:
+Name: Joe Makali Munnuve
+(and ensure phone/email/socials match what is provided in the docs or config files)
+
+UI Quality & Experience
+
+Many areas of text are too white and lack contrast.
+
+Layout and components feel threadbare → add spacing, visual rhythm, smoother transitions.
+
+Improve perceived speed & smoothness (layout shifts, transitions, image loading).
+
+Goal
+
+Refine the site into a world-class, modern, visually compelling, fast and polished website that matches the professionalism of the brand. The current version feels mediocre and unfinished — after fixes it should feel premium, intentional, and complete.
+
+Deliverables
+
+Full UI/UX polish pass across all pages.
+
+Proper use of high-resolution brand-relevant imagery.
+
+Updated contact details.
+
+Services organized correctly.
+
+Case studies populated correctly.
+
+Team + Careers pages added.
+
+Blog + internal pages have feature images.
+
+Netlify routing issue fixed so deployment loads correctly.
